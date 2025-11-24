@@ -36,9 +36,9 @@ function draw() {
     character.draw();
 	platform.draw();
 
-    // drawPlatform(x, y + 150);
-
-    // drawObstacle();
+    if(character.y + character.h < 300){
+        character.y += 10;
+    }
 
     // Floor
     line(0, 300, 400, 300);
