@@ -1,5 +1,4 @@
 class Doodler {
-<<<<<<< Updated upstream
     constuctor(){
         this.r = 50;
         this.x = width/2;
@@ -8,18 +7,7 @@ class Doodler {
         this.gravity = 0.4;
         this.jumpForce = -10;
     }
-}
-
-=======
-    constructor(){
-        this.r = 50;
-        this.x = width / 2;
-        this.y = height - 200;
-        this.vy = 0;
-        this. gravity = 0.4;
-        this. jumpForce = -10;
-    }
-
+    
     update(){
         this.vy += this.gravity;
         this.y += this.vy;
@@ -80,4 +68,3 @@ class Doodler {
         this.vy = this.jumpForce;
     }
 }
->>>>>>> Stashed changes
