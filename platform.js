@@ -10,7 +10,7 @@ class Platform {
         this.speed = 2;
     }
 
-    update(){
+    update() {
             if (this.type === 1){
                 this.x += this.speed * this.Direction;
                 if (this.x + this.w/2 > width || this.x - this.w/2 < 0){
@@ -45,4 +45,4 @@ class Platform {
 
                 }
             } 
-    }
+     } 
