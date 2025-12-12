@@ -31,6 +31,10 @@ class Platform {
                 else if (this.type === 1){
                     fill(200,230,255);
                     rect(this.x,this.y,this.w,this.h,10);
+                    ellipse(this.x - 20, this.y, 30, 20);
+                    ellipse(this.x + 20, this.y, 30, 20);
+                    ellipse(this.x, this.y - 10, 40, 30);
+                    
                 }
                 else if (this.type === 2){
                     fill(200,100,50);
