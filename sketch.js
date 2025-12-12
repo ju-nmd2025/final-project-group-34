@@ -106,3 +106,169 @@ function playGame() {
 if (doodler.y > height){
     gameState = 2;
 }
+
+ if
+ (score >= winningScore) {
+    gameState = 
+3
+;
+  }
+  
+  fill(
+255
+);
+  stroke(
+0
+);
+  strokeWeight(
+2
+);
+  textSize(
+24
+);
+  textAlign(LEFT);
+  text(
+"Score: " + score, 10, 30
+);
+  textSize(
+14
+);
+  text(
+"Goal: " + winningScore, 10, 50
+);
+
+function drawStartScreen() 
+{
+  fill(
+255, 255, 255, 150
+);
+  rectMode(CENTER);
+  rect(width/
+2, height/2, 300, 200, 20
+);
+  
+  textAlign(CENTER);
+  fill(
+0
+);
+  noStroke();
+  textSize(
+32
+);
+  text(
+"🌻 Sunflower Jump", width / 2, height / 2 - 20
+);
+  textSize(
+16
+);
+  text(
+"Reach " + winningScore + " to Win!", width / 2, height / 2 + 10
+);
+  text(
+"Press SPACE to Start", width / 2, height / 2 + 50
+);
+}
+
+function drawEndScreen() 
+{
+  fill(
+0, 0, 0, 150
+);
+  rectMode(CORNER);
+  rect(
+0, 0
+, width, height);
+  
+  textAlign(CENTER);
+  fill(
+255
+);
+  noStroke();
+  textSize(
+40
+);
+  text(
+"GAME OVER", width / 2, height / 2 - 40
+);
+  textSize(
+24
+);
+  text(
+"Final Score: " + score, width / 2, height / 2 + 10
+);
+  textSize(
+16
+);
+  text(
+"Press SPACE to Restart", width / 2, height / 2 + 60
+);
+}
+
+function drawWinScreen() 
+{
+  randomSeed(score); 
+  noStroke();
+  for(let i=0; i<50
+; i++) {
+    fill(random(
+255), random(255), random(255
+));
+    ellipse(random(width), random(height), 
+10, 10
+);
+  }
+  
+  textAlign(CENTER);
+  
+  fill(
+255, 255, 255, 200
+);
+  rectMode(CENTER);
+  rect(width/
+2, height/2, 320, 220, 20
+);
+
+  fill(
+0
+);
+  textSize(
+40
+);
+  text(
+"YOU WIN! 🌻", width / 2, height / 2 - 40
+);
+  
+  textSize(
+20
+);
+  text(
+"Goal Reached: " + winningScore, width / 2, height / 2 + 10
+);
+  text(
+"Final Score: " + score, width / 2, height / 2 + 40
+);
+  
+  textSize(
+16
+);
+  fill(
+50
+);
+  text(
+"Press SPACE to Play Again", width / 2, height / 2 + 80
+);
+}
+
+function keyPressed() 
+{
+  if (key === ' '
+) {
+    if (gameState === 0 || gameState === 2 || gameState === 3
+) {
+      resetGame();
+      gameState = 
+1
+;
+    }
+  }
+}
