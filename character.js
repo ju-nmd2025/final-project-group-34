@@ -41,7 +41,7 @@ class Doodler {
     fill(255); ellipse(-8, -5, 8, 8); ellipse(8, -5, 8, 8); 
     fill(0);   ellipse(-8, -5, 3, 3); ellipse(8, -5, 3, 3); 
     noFill(); stroke(255); strokeWeight(2); arc(0, 5, 10, 8, 0, PI); 
-    
+                                                                                   
     pop();
   }
 
