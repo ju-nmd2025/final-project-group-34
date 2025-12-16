@@ -1,3 +1,4 @@
+alert("game.js loaded on GitHub Pages");
 import { Platform } from "platform.js";
 import { Character } from "./Doodler.js";
 let player;
