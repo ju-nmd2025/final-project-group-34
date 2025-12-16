@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
-alert("game.js loaded on GitHub Pages");
-import { Platform } from "platform.js";
-import { Character } from "./Doodler.js";
-=======
-import { Platform } from "./platform.js";
+import { latform } from "./platform.js";
 import { Character } from "./character.js";
 
->>>>>>> Stashed changes
 let player;
 let platforms = [];
 let score = 0;
