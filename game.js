@@ -1,5 +1,3 @@
-import { Platform } from "platform";
-import { Character } from "./character";
 
 let player;
 let platforms = [];
