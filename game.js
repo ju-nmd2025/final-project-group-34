@@ -1,4 +1,5 @@
-
+import { Platform } from "platform.js";
+import { Character } from "./Doodler.js";
 let player;
 let platforms = [];
 let score = 0;
