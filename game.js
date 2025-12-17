@@ -1,7 +1,4 @@
-import { latform } from "./platform.js";
-import { Character } from "./character.js";
-
-let player;
+ let player;
 let platforms = [];
 let score = 0;
 let state = 0; 
@@ -23,8 +20,8 @@ function reset() {
   for (let i = 0; i < 8; i++) {
     let x = random(50, width - 50);
     if (i === 0) x = width / 2; 
-
-
+    
+   
     let type = 0;
     if (i > 2) {
       if (random(1) < 0.2) type = 1;
@@ -52,6 +49,7 @@ function play() {
   player.update();
   player.show();
 
+ 
   if (player.y < height / 2 && player.vy < 0) {
     player.y = height / 2;
     let shift = -player.vy;
@@ -59,6 +57,7 @@ function play() {
     for (let p of platforms) p.y += shift;
   }
 
+ 
   let highY = height; 
   for (let p of platforms) if (p.y < highY) highY = p.y;
 
@@ -76,7 +75,7 @@ function play() {
       if (p.type === 2) p.isBroken = true; 
     }
 
-    
+   
     if (p.y > height) {
       platforms.splice(i, 1);
       
@@ -88,11 +87,11 @@ function play() {
     }
   }
 
-  
+ 
   if (player.y > height) state = 2;
   if (score >= winScore) state = 3;
 
-  
+ 
   fill(0); textSize(20); text("Score: " + score, 10, 30);
   text("Goal: " + winScore, 10, 50);
 }
@@ -105,7 +104,7 @@ function drawStart() {
 }
 
 function drawLose() {
-  fill(0, 150); rect(width/2, height/2, width, height); 
+  fill(0, 150); rect(width/2, height/2, width, height); // overlay
   textAlign(CENTER); fill(255);
   textSize(40); text("GAME OVER", width/2, height/2);
   textSize(20); text("Score: " + score, width/2, height/2 + 40);
