@@ -1,4 +1,4 @@
- class Doodler {
+ export class Doodler {
   constructor() {
     this.size = 50;
     this.x = width / 2;
