@@ -12,7 +12,7 @@ class Platform {
   }
 
   update() {
-   
+    
     if (this.type === 1) {
       this.x += this.speed * this.dir;
       if (this.x > width || this.x < 0) this.dir *= -1;
