@@ -123,3 +123,6 @@ function keyPressed() {
     reset(); state = 1;
   }
 }
+
+window.setup = setup
+window.draw = draw
