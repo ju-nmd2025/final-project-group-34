@@ -1,4 +1,6 @@
- let player;
+ import { Doodler } from './Doodler.js';
+import { Platform } from './platform.js';
+let player;
 let platforms = [];
 let score = 0;
 let state = 0; 
@@ -126,3 +128,4 @@ function keyPressed() {
 
 window.setup = setup
 window.draw = draw
+window.keyPressed = keyPressed
