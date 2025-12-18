@@ -1,5 +1,6 @@
- import { Doodler } from './Doodler.js';
+import { Doodler } from './Doodler.js';
 import { Platform } from './platform.js';
+
 let player;
 let platforms = [];
 let score = 0;
