@@ -33,13 +33,13 @@
       ellipse(0, -20, 15, 30);
       rotate(PI / 5);
     }
-    
+  
     fill(100, 50, 0); 
-    ellipse(0, 0, 35, 35);
+    ellipse(0, 0, 35, 35); 
     
     // smile
-    fill(255); ellipse(-8, -5, 8, 8); ellipse(8, -5, 8, 8); // eye
-    fill(0);   ellipse(-8, -5, 3, 3); ellipse(8, -5, 3, 3); // eye
+    fill(255); ellipse(-8, -5, 8, 8); ellipse(8, -5, 8, 8); // eye 
+    fill(0);   ellipse(-8, -5, 3, 3); ellipse(8, -5, 3, 3); // eye pupil
     noFill(); stroke(255); strokeWeight(2); arc(0, 5, 10, 8, 0, PI); // mouse
     
     pop();
