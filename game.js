@@ -101,8 +101,14 @@ function play() {
   if (score >= winScore) state = 3;
 
  
-  fill(0); textSize(20); text("Score: " + score, 40, 30);
-  text("Goal: " + winScore, 40, 50);
+ push();
+textAlign(LEFT);
+fill(0);
+textSize(20);
+text("Score: " + score, 10, 30);
+text("Goal: " + winScore, 10, 50);
+pop();
+
 }
 
 // draw start screen
