@@ -20,7 +20,7 @@ function reset() {
   
   let y = height;
   
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 8; i++) { 
     let x = random(50, width - 50);
     if (i === 0) x = width / 2; 
     
@@ -37,7 +37,7 @@ function reset() {
 }
 
 function draw() {
-  background(135, 206, 235); 
+  background(135, 206, 235);
   if (state === 3) background(255, 215, 0); 
 
   if (state === 0) drawStart();
@@ -95,8 +95,8 @@ function play() {
   if (score >= winScore) state = 3;
 
  
-  fill(0); textSize(20); text("Score: " + score, 10, 30);
-  text("Goal: " + winScore, 10, 50);
+  fill(0); textSize(20); text("Score: " + score, 20, 30);
+  text("Goal: " + winScore, 20, 50);
 }
 
 
