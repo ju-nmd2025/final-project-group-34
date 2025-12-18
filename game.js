@@ -21,14 +21,9 @@ function reset() {
   
   let y = height;
   
-<<<<<<< HEAD
-  for (let i = 0; i < 8; i++) { 
-    let x = random(50, width - 50);
-=======
   // creating platforms
   for (let i = 0; i < 8; i++) {
     let x = random(50, width - 50); //x position
->>>>>>> c64580374d7c20bebad12cac0000cf1529067293
     if (i === 0) x = width / 2; 
     
    
@@ -46,13 +41,8 @@ function reset() {
 
 // main game loop
 function draw() {
-<<<<<<< HEAD
-  background(135, 206, 235);
-  if (state === 3) background(255, 215, 0); 
-=======
   background(135, 206, 235); 
   if (state === 3) background(255, 215, 0); // win - golden background
->>>>>>> c64580374d7c20bebad12cac0000cf1529067293
 
   if (state === 0) drawStart();
   else if (state === 1) play();
@@ -110,17 +100,9 @@ function play() {
   if (player.y > height) state = 2;
   if (score >= winScore) state = 3;
 
-<<<<<<< HEAD
  
   fill(0); textSize(20); text("Score: " + score, 20, 30);
   text("Goal: " + winScore, 20, 50);
-=======
- //display final score
-  fill(0); 
-  textSize(20); 
-  text("Score: " + score, 10, 30);
-  text("Goal: " + winScore, 10, 50);
->>>>>>> c64580374d7c20bebad12cac0000cf1529067293
 }
 
 // draw start screen
