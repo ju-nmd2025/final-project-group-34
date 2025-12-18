@@ -8,19 +8,19 @@ export class Platform {
     this.isBroken = false;// for breakable platforms
 
     this.dir = 1; //left/right turn
-    this.speed = 2;
+    this.speed = 2;//speed
   }
 
   update() {
     
-    if (this.type === 1) {
-      this.x += this.speed * this.dir;
-      if (this.x > width || this.x < 0) this.dir *= -1;
+    if (this.type === 1) {// moving platform 1
+      this.x += this.speed * this.dir;//
+      if (this.x > width || this.x < 0) this.dir *= -1;// touch wall back
     }
   }
 
   show() {
-    if (this.isBroken) return; 
+    if (this.isBroken) return; // don't show if broken
 
     rectMode(CENTER);
     noStroke();
